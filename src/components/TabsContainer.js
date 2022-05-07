@@ -49,7 +49,7 @@ const TabsContainer = () => {
   const handleTabsChange = (index) => {
     setTabIndex(index);
     if (index === 0) {
-      myCtx.setSearchWeb('https://google.com/search?q=');
+      myCtx.setSearchWeb('chttps://google.com/search?q=');
     } else if (index === 1) {
       myCtx.setSearchWeb(
         'https://dictionary.cambridge.org/vi/dictionary/english/'

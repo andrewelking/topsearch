@@ -26,10 +26,13 @@ const SearchBox = () => {
     event.preventDefault();
     let defaultURL = myCtx.searchWeb
 
-    if (defaultURL !== '') {
+    if (defaultURL !== '' && defaultURL !== 'https://google.com/search?q=') {
       defaultURL += value;
       window.open(defaultURL);
-    } else {
+    } else if (
+      defaultURL === 'https://google.com/search?q=' ||
+      defaultURL === ''
+    ) {
       let defaultURL = `https://google.com/search?q=${
         toggle ? `"${value}"` : value
       }`;
