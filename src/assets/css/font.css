@@ -1,0 +1,43 @@
+/* EMBED FONTS - BE VIETNAM */
+
+@font-face {
+    font-family: 'Google Sans';
+    src: url(../fonts/google-sans/GoogleSans-Regular.ttf);
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Google Sans';
+    src: url(../fonts/google-sans/GoogleSans-Italic.ttf);
+    font-style: italic;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Google Sans';
+    src: url(../fonts/google-sans/GoogleSans-Medium.ttf);
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Google Sans';
+    src: url(../fonts/google-sans/GoogleSans-MediumItalic.ttf);
+    font-style: italic;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Google Sans';
+    src: url(../fonts/google-sans/GoogleSans-Bold.ttf);
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Google Sans';
+    src: url(../fonts/google-sans/GoogleSans-BoldItalic.ttf);
+    font-style: italic;
+    font-weight: 700;
+}

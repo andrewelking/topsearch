@@ -1,0 +1,324 @@
+/* TOP BUTTONS CSS */
+
+.TopButtons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100vw;
+}
+
+.TopButton, .TopIcon {
+    margin: 40px 16px 0;
+}
+
+.TopIcon {
+    margin-right: 40px;
+    font-size: 28px;
+}
+
+.TopButton {
+    font-size: 20px;
+    font-weight: 500;
+    color: #29abe2;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    transition: all linear 0.2s;
+}
+
+.button {
+    padding: 8px 32px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: #29abe2;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+}
+
+
+.TopButton:hover, .TopIcon:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.button:hover {
+    box-shadow: 0 4px 16px 0 rgb(0 0 0 / 16%);
+}
+
+/* LOGO CSS */
+
+.Logo {
+    cursor: pointer;
+    width: 100%;
+    margin-top: 32px;
+}
+
+/* SEARCH BOX CSS */
+
+.SearchBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 640px;
+    height: 40px;
+    padding: 0 16px;
+    margin: 40px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 20px;
+}
+
+.SearchInput {
+    flex: 1;
+    margin: 0 8px;
+    font-size: 16px;
+    line-height: 16px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.SearchInput::placeholder {
+    color: #999999;
+}
+
+.SearchIcon {
+    opacity: 0.8;
+    margin: 0 8px;
+    color: #015f87;
+}
+
+.SearchIcon:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+/* BOTTOM BUTTONS CSS */
+
+.CircleButton {
+    width: 48px;
+    height: 48px;
+    margin: 8px 64px 0;
+    border-radius: 24px;
+    background-color: rgba(41, 171, 226, 0.6);
+    transition: all linear 0.16s;
+}
+
+.CircleIcon {
+    font-size: 24px;
+    transition: all linear 0.16s;
+}
+
+.CircleButton:hover {
+    cursor: pointer;
+    background-color: #29abe2;
+    box-shadow: 0 4px 16px 0 rgb(0 0 0 / 16%);
+}
+
+.CircleButton:hover .CircleIcon {
+    font-size: 28px;
+}
+
+.ButtonTitle {
+    font-size: 16px;
+    font-style: italic;
+}
+
+.BottomButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ADVANCED FILTER CSS */
+
+.AdvancedFilter {
+    position: relative;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    margin: 16px 0 32px;
+    width: 1000px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    --zoom-from: 0;
+    --zoom-to: 1;
+    transform-origin: calc(316px) top;
+    animation: zoomIn ease-in 0.4s;
+    will-change: opacity, transform;
+}
+
+.AdvancedFilter::before {
+    content: "";
+    border-width: 20px 26px;
+    border-style: solid;
+    border-color: transparent transparent #ffffff transparent;
+    position: absolute;
+    left: 316px;
+    top: -40px;
+}
+
+.SearchFilter {
+    text-align: center;
+}
+
+.FilterTitle {
+    color: #06638a;
+}
+
+.WebsitesList {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 800px;
+    list-style: none;
+}
+
+.WebsitesItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    width: 128px;
+    background-color: #f0f8ff;
+    border-radius: 8px;
+    transition: all linear 0.16s;
+}
+
+.WebsitesItem i {
+    font-size: 24px;
+}
+
+.WebsitesItem p, .WebsitesItem i {
+    margin: 4px;
+}
+
+.WebsitesItem:hover {
+    background-color: #29aae27b;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(var(--zoom-from));
+    } to {
+        opacity: 1;
+        transform: scale(var(--zoom-to));
+    }
+}
+
+/* NEWS CSS */
+
+/* FOOTER CSS */
+
+.Footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 64px;
+    background-color: #87cefa;
+}
+
+.LanguageSwitch {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 40px;
+}
+
+.LanguageTitle {
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.Language {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+}
+
+.LanguageIcon {
+    width: 100%;
+    height: 100%;
+    margin: 8px;
+}
+
+.ModeSwitch {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0 40px;
+}
+
+.ModeTitle {
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.ModeSlideContainer {
+	width: 80px;
+	height: 40px;
+	margin-left: 12px;
+}
+
+.ModeCheckbox {
+	visibility: none;
+	display: none;
+}
+
+.ModeSlide {
+	position: relative;
+	display: block;
+	width: 80px;
+	height: 40px;
+	cursor: pointer;
+	border-radius: 20px;
+	background-color: #f0f8ff;
+	overflow: hidden;
+	transition: ease-in 0.5s;
+}
+
+.ModeSlide::before {
+	content: "";
+	position: absolute;
+	top: 6px;
+	right: 6px;
+	background-color: #87cefa;
+	width: 28px;
+	height: 28px;
+	border-radius: 50%;
+	transition: 0.5s;
+	cursor: pointer;
+}
+
+.ModeCheckbox:checked ~ .ModeSlide {
+	background-color: #202124;
+}
+
+.ModeCheckbox:checked ~ .ModeSlide::before {
+	transform: translateX(-40px);
+	background-color: #f0f8ff;
+}
+
+@media (max-width: 740px) {
+    .Footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        width: 100%;
+        height: 128px;
+        background-color: #87cefa;
+    }
+}

@@ -1,0 +1,35 @@
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.separation {
+    width: 2px;
+    height: 32px;
+    background-color: #ffffff;
+    margin: 0 0 0 8px;
+}
+
+.flex {
+    display: flex;
+}
+
+.simple-keyboard {
+    display: none;
+    position: absolute;
+    max-width: 800px;
+    right: 0;
+    bottom: 64px;
+}
+
+.show {
+    display: block;
+}
+
+@media (max-width: 740px) {
+    .simple-keyboard {
+        bottom: 128px;
+    }
+}
