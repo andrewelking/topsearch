@@ -24,28 +24,30 @@ const SearchBox = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    let defaultURL = myCtx.searchWeb
+    if (value !== '') {
+      let defaultURL = myCtx.searchWeb;
 
-    if (defaultURL !== '' && defaultURL !== 'https://google.com/search?q=') {
-      defaultURL += value;
-      window.open(defaultURL);
-    } else if (
-      defaultURL === 'https://google.com/search?q=' ||
-      defaultURL === ''
-    ) {
-      let defaultURL = `https://google.com/search?q=${
-        toggle ? `"${value}"` : value
-      }`;
-      if (myCtx.list.length > 0) {
-        myCtx.list.forEach((link, i) => {
-          defaultURL += `${i > 0 ? ' OR+' : ''} site%3A${link}`;
-        });
+      if (defaultURL !== '' && defaultURL !== 'https://google.com/search?q=') {
+        defaultURL += value;
         window.open(defaultURL);
-      } else {
-        window.open(defaultURL);
+      } else if (
+        defaultURL === 'https://google.com/search?q=' ||
+        defaultURL === ''
+      ) {
+        let defaultURL = `https://google.com/search?q=${
+          toggle ? `"${value}"` : value
+        }`;
+        if (myCtx.list.length > 0) {
+          myCtx.list.forEach((link, i) => {
+            defaultURL += `${i > 0 ? ' OR+' : ''} site%3A${link}`;
+          });
+          window.open(defaultURL);
+        } else {
+          window.open(defaultURL);
+        }
       }
+      setValue('');
     }
-    setValue('');
   };
 
   return (
