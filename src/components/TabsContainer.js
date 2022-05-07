@@ -25,7 +25,6 @@ import MyContext from './MyContext.js';
 import { useContext, useState } from 'react';
 
 const TabsContainer = () => {
-  console.log('something');
   const myCtx = useContext(MyContext);
 
   const toggleActiveLink = (webName) => {
@@ -42,8 +41,6 @@ const TabsContainer = () => {
 
   const [musicSearch, setMusicSearch] = useState('all');
   const [movieSearch, setMovieSearch] = useState('tv');
-  // let musicWeb = `https://www.allmusic.com/search/${musicSearch}/`;
-  // let movieWeb = `https://www.themoviedb.org/search/tv?query=${movieSearch}`
 
   const getMusicWebURL = (value) => `https://www.allmusic.com/search/${value}/`;
   const getMovieWebURL = (value) =>
@@ -51,7 +48,9 @@ const TabsContainer = () => {
 
   const handleTabsChange = (index) => {
     setTabIndex(index);
-    if (index === 1) {
+    if (index === 0) {
+      myCtx.setSearchWeb('https://google.com/search?q=');
+    } else if (index === 1) {
       myCtx.setSearchWeb(
         'https://dictionary.cambridge.org/vi/dictionary/english/'
       );
